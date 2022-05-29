@@ -1,0 +1,18 @@
+Hello, this is Vaidehi Udapure from Cummins College of Engineering for Women, Pune. I am a second year Computer Engineering student.
+I felt more comfortable in explaining the code on text rather than speaking in the video itself. So here it goes.
+
+In the problem statement chosen, we are supposed to locate a given number of airports based on the given coordinate locations of countries. It is a mixture of data analysis and algorithms.
+I downloaded countries.csv file from kaggle (also attached on github) and have used K Means Clustering algorithm to locate that number of airports. I have used the user defined method to do so.
+
+K Means Clustering is a type of unsupervised learning, used when we have unlabeled data. The goal of this algorithm is to find groups in the data, with the number of groups represented by the variable K.
+
+Now let's get to the code. Firstly, I have imported all the required libraries like numpy, pandas, etc. Then I have mounted Google Drive and read the mentioned csv file. Data required by us is stored in list. 
+
+Basically in K means clustering algorithm, 'k' random points are selected as centroids. Eucledian distance of every point from every centroid is calculated and each point is assigned to the centroid with the least distance from that point so that we get 'k' clusters. From these clusters, centroids are found again and again new clusters are found. This process is repeated till we get the same centroids in the following iterations. And we get the coordinates at which the airports should be located. This algorithm works for any number of k.
+
+Here, I have considered k as 3. So, I wish to get the coordiantes of 3 possible airport locations. 3 random points are selected and the marked in red in the first scatter plot in the output. Rest of the coordinates are the black points. Everytime the code is run, new red points are obtained in the first scatter plot.
+
+A loop is run till the variable diff is equal to zero, i.e., till we get the same centroids in 2 consecutive iterations. Eucledian distance between each location and centroid is found between the latitude and longitude of the points using the formula under root x2 minus x1 whole square plus y2 minus y1 whole square. This distance is appended in a list named ED and also in another list X. Minimum distance is found and that point is allocated in that cluster.  New centroids are found and similarly new clusters are found till we get the same centroids, i.e., till the difference between the previous and current centroids is zero. A scatter plot is printed again with 3 clusters of 3 colors and their centroids in red. So if we want to construct 3 international airports, these should be their coordinates. And people traveling from the same color coordinates should use their respective cluster centroid for easy travel as it is the nearest airport.
+
+Here, I come to an end with explaining my project. The instructions for running this project have also been provided. 
+I would like to apologise for any trouble caused and would like to thank you for this opportuninty.
